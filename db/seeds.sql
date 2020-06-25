@@ -1,0 +1,1 @@
+insert into burgers (burger_name,devoured) values ("Cheeseburger",true),("Double Patty Cheeseburger",true),("Double Animal Style",false),("The Original Burger",true);
