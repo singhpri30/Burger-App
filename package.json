@@ -1,0 +1,24 @@
+{
+  "name": "burger-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/singhpri30/Burger-App.git"
+  },
+  "author": "priyanka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/singhpri30/Burger-App/issues"
+  },
+  "homepage": "https://github.com/singhpri30/Burger-App#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "handlebars": "^4.7.6",
+    "mysql": "^2.18.1"
+  }
+}
