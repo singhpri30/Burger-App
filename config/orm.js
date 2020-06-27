@@ -5,26 +5,41 @@ const connection = require("../config/connection.js");
 const orm = {
 
     selectAll: (tableInput) => {
-        const queryString = "select * from ??";
-        connection.query(queryString, [tableInput], (err, res) => {
-            if (err) throw err;
-            console.log(res);
+        return new Promise((resolve, reject) => {
+
+            const queryString = "select * from ??";
+            connection.query(queryString, [tableInput], (err, result) => {
+                if (err) {
+                    reject(err);
+                }
+                resolve(result);
+            })
         })
     },
 
     insertOne: (tableInput, colName, valOfCol) => {
-        const queryString = "insert into ? (?) values (?)";
-        connection.query(queryString, [tableInput, colName, valOfCol], (err, res) => {
-            if (err) throw err;
-            console.log(res);
+        return new Promise((resolve, reject) => {
+
+            const queryString = "insert into ? (?) values (?)";
+            connection.query(queryString, [tableInput, colName, valOfCol], (err, result) => {
+                if (err) {
+                    reject(err);
+                };
+                resolve(result);
+            })
         })
     },
 
-    updateOne: (tableInput, colName1, valOfCol1, colName2, valOfCol2) => {
-        const queryString = "update ? set ?=? where ?=?;"
-        connection.query(queryString, [tableInput, colName1, valOfCol1, colName2, valOfCol2], (err, res) => {
-            if (err) throw err;
-            console.log(res);
+    updateOne: (tableInput, colName, valOfCol1, valOfCol2) => {
+        return new Promise((resolve, reject) => {
+
+            const queryString = "update ?? set ??=? where id=?;"
+            connection.query(queryString, [tableInput, colName, valOfCol1, valOfCol2], (err, result) => {
+                if (err) {
+                    reject(err);
+                };
+                resolve(result);
+            })
         })
     },
 

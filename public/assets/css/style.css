@@ -1,3 +1,13 @@
+body {
+  /* background-image: url("../images/background_img.jpg"); */
+  background-image: url("../img/d2zgg4o-9381c546-f6c9-49ac-8539-ba5556231979.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
 li {
   padding: 5px;
   margin: 5px;
