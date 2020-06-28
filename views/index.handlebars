@@ -1,33 +1,76 @@
-<h1>Eat-Da-Burger!</h1>
+<nav class="navbar navbar-light bg-dark">
+  <h1 class='heading mx-auto text-warning'>Eat da Burger!</h1>
+</nav>
 
-<div class="burger-div">
-  <div class="not-devoured-burgers">
-    <h3>Burgers to devour</h3>
-    <ul>
-      {{#each this.notDevoured}}
-      <li>{{burger_name}} <button id="devour-burger" data-id="{{id}}">Devour it</button></li>
-      {{/each}}
-    </ul>
+<div class="row">
+  <div class="col-md-4">
+
+    <div class="card mt-5 ml-2 bg-warning">
+
+      <div class="card-body">
+        <h5 class="card-title text-center">Burgers to devour</h5>
+
+      </div>
+      <ul>
+        {{#each this.notDevoured}}
+        <li>
+          {{burger_name}}
+          <button class="devour-button float-right " data-id="{{id}}">
+            Devour it <i class="fas fa-utensils ml-2"></i>
+          </button>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+
   </div>
 
-  <div class="devoured-burgers">
-    <h3>Devoured Burgers</h3>
-    <ul>
-      {{#each this.devoured}}
-      <li>{{burger_name}}</li>
-      {{/each}}
-    </ul>
+  <div class="col-md-4">
+
+    <div class="card mt-5 ml-2 bg-warning">
+      <img class="card-img-top" src="./assets/img/d2zgg4o-9381c546-f6c9-49ac-8539-ba5556231979.jpg"
+        alt="Card image cap">
+    </div>
+
+  </div>
+
+  <div class="col-md-4">
+
+
+    <div class="card mt-5 mr-2 bg-warning">
+
+      <div class="card-body">
+        <h5 class="card-title text-center">Devoured</h5>
+
+      </div>
+      <ul>
+        {{#each this.devoured}}
+        <li>
+          {{burger_name}}
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+
   </div>
 </div>
 
-<form class="create-form">
-  <div class="form-group">
-    <label for="burger">Enter a burger you want to eat and Click the "Submit" button</label>
-    <input type="text" id="burger-name" name="burger">
+
+
+
+
+
+<div class="row">
+  <div class="col-md-12 mt-5">
+
+    <form class="text-center create-form">
+      <label class="heading text-light" for="burgers">Enter a burger you want to eat and click the "Submit"
+        button</label>
+      <input id="burger-name" type="text" name="burgers">
+      <button class="submit-button" type="submit">Submit</button>
+    </form>
+
+
   </div>
 
-
-
-  <button id="burgerButton" type="submit">Submit</button>
-  <p></p>
-</form>
+</div>

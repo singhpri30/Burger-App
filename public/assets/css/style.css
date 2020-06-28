@@ -1,29 +1,27 @@
 body {
-  /* background-image: url("../images/background_img.jpg"); */
-  background-image: url("../img/d2zgg4o-9381c546-f6c9-49ac-8539-ba5556231979.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow-x: hidden;
+  background-color: #272727;
   font-family: "Source Sans Pro", sans-serif;
 }
 
-li {
-  padding: 5px;
+#burger-img{
+  width: 25%;
+  height: 25%;
+  
+}
+
+input, label {
+  display:block;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+button {
   margin: 5px;
-  background: #faebd7;
-}
-
-.label {
-  font-weight: bold;
-}
-
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: aqua;
-}
-
-.form-group {
-  margin-bottom: 5px;
+  background-color: #95BF15;
+  border: 1px #272727 solid;
+  border-radius: 5px;
 }

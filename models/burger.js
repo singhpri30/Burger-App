@@ -4,29 +4,35 @@ const orm = require("../config/orm.js");
 
 const burger = {
     viewAll: () => {
-        orm.selectAll("burgers").then((result) => {
-            console.log(result);
-        })
-            .catch((err) => {
+        return new Promise((resolve, reject) => {
+            orm.selectAll("burgers").then((result) => {
+                resolve(result);
+            }).catch((err) => {
                 console.error(err);
             });
+        });
+
     },
-    insert: (burgerName) => {
-        orm.insertOne("burgers", "burger_name", burgerName).then((result) => {
-            console.log(result);
-        })
-            .catch((err) => {
+    insert: (name) => {
+        return new Promise((resolve, reject) => {
+
+            orm.insertOne("burgers", "burger_name", name).then((result) => {
+                resolve(result);
+            }).catch((err) => {
                 console.error(err);
             });
+        })
     },
-    // update: () => {
-    //     orm.updateOne("burgers", "burger_name",).then((result) => {
-    //         console.log(result);
-    //     })
-    //         .catch((err) => {
-    //             console.error(err);
-    //         });
-    // }
+    update: (id) => {
+        return new Promise((resolve, reject) => {
+
+            orm.updateOne("burgers", "devoured", true, id).then((result) => {
+                resolve(result);
+            }).catch((err) => {
+                console.error(err);
+            });
+        })
+    }
 
 };
 

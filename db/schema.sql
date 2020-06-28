@@ -1,10 +1,12 @@
-create database burgers_db;
-use burgers_db;
+DROP DATABASE IF EXISTS burgers_db;
+CREATE DATABASE burgers_db;
 
-create table burgers(
-id integer auto_increment not null,
-burger_name varchar(100),
-devoured boolean default true,
-primary key (id)
+USE burgers_db;
 
+CREATE TABLE burgers (
+id INT AUTO_INCREMENT NOT NULL,
+burger_name VARCHAR(255) NOT NULL,
+devoured BOOL DEFAULT FALSE,
+createdAt TIMESTAMP NOT NULL DEFAULT current_timestamp,
+PRIMARY KEY (id)
 );
