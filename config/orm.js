@@ -13,7 +13,6 @@ const orm = {
                     reject(err);
                 }
                 resolve(result);
-                console.log("hello" + result);
             });
 
         });
@@ -27,7 +26,6 @@ const orm = {
                 if (err) {
                     reject(err);
                 };
-                console.log(result);
                 resolve(result);
             });
 

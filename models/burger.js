@@ -18,9 +18,7 @@ const burger = {
 
             orm.insertOne("burgers", "burger_name", name).then((result) => {
                 resolve(result);
-            }).catch((err) => {
-                console.error(err);
-            });
+            })
         })
     },
     update: (id) => {
@@ -28,9 +26,7 @@ const burger = {
 
             orm.updateOne("burgers", "devoured", true, id).then((result) => {
                 resolve(result);
-            }).catch((err) => {
-                console.error(err);
-            });
+            })
         })
     }
 

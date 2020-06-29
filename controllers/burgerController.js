@@ -11,19 +11,16 @@ router.get("/", (req, res) => {
     burger.viewAll().then((data) => {
         let devoured = data.filter((burger) => burger.devoured == true);
         let notDevoured = data.filter((burger) => burger.devoured == false);
-        const handlebarObject = {
+        const burger_data = {
             devoured: devoured,
             notDevoured: notDevoured,
         };
-        //console.log(res)
-        console.log(handlebarObject);
-        res.render("index", handlebarObject);
+        res.render("index", burger_data);
     });
 });
 
 //route to add a new burger
-router.post("/api/burgers", (req, res) => {
-    console.log(req.body.name)
+router.post("/", (req, res) => {
     burger.insert(req.body.name).then((data) => {
         console.log("burger added successfully");
         res.json(req.body.name);
@@ -31,10 +28,10 @@ router.post("/api/burgers", (req, res) => {
 });
 
 // update to change the devoured to true
-router.put("/api/burgers/:id", (req, res) => {
+router.put("/:id", (req, res) => {
     const id = req.params.id;
     burger.update(id).then(() => {
-        console.log("Burger successfully devoured");
+        console.log("Burger devoured");
         res.json(id);
     });
 });

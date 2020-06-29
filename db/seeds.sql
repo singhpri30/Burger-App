@@ -1,1 +1,1 @@
-insert into burgers (burger_name) values ("Cheeseburger"),("Double Patty Cheeseburger"),("Double Animal Style"),("The Original Burger");
+insert into burgers (burger_name) values ("Cheeseburger",1),("Double Patty Cheeseburger",1),("Double Animal Style",0),("The Original Burger",0);
