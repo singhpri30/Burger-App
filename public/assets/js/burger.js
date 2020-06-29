@@ -13,7 +13,6 @@ $(document).ready(() => {
     });
   });
 
-  // devour it on click event
   $(".devour-button").on("click", function (event) {
     let id = $(this).data("id");
 
