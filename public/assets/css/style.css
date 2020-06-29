@@ -27,6 +27,7 @@ ul {
   border-radius: 5px;
   border: 1px #272727 solid;
   margin: 5px;
+  float: right;
 }
 
 .submit-button {
