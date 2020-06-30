@@ -5,7 +5,7 @@ $(document).ready(() => {
       name: $("#burger-input").val().trim(),
     };
 
-    $.ajax("/", {
+    $.ajax("/api/burgers", {
       type: "POST",
       data: newBurger,
     }).then(() => {
@@ -16,7 +16,7 @@ $(document).ready(() => {
   $(".devour-button").on("click", function (event) {
     let id = $(this).data("id");
 
-    $.ajax(`/${id}`, {
+    $.ajax(`/api/burgers/${id}`, {
       type: "PUT",
       data: id
     }).then(() => {

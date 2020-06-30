@@ -20,7 +20,7 @@ router.get("/", (req, res) => {
 });
 
 //route to add a new burger
-router.post("/", (req, res) => {
+router.post("/api/burgers", (req, res) => {
     burger.insert(req.body.name).then((data) => {
         console.log("burger added successfully");
         res.json(req.body.name);
@@ -28,7 +28,7 @@ router.post("/", (req, res) => {
 });
 
 // update to change the devoured to true
-router.put("/:id", (req, res) => {
+router.put("/api/burgers/:id", (req, res) => {
     const id = req.params.id;
     burger.update(id).then(() => {
         console.log("Burger devoured");
